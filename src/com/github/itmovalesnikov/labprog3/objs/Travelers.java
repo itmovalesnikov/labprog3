@@ -7,11 +7,26 @@ import com.github.itmovalesnikov.labprog3.locations.TransitionException;
 public class Travelers extends PhysicalObject {
     @Override
     public void interact() {
+        dressUp();
+        washUp();
+        brushTeeth();
+        haveBreakfast();
+        goWalk();
+    }
+
+    public void dressUp() {
         System.out.println("Путешественики оделись");
+    }
+    public void washUp() {
         System.out.println("Путешественики умылись");
+    }
+    public void brushTeeth() {
         System.out.println("Путешественики почистили зубы");
+    }
+    public void haveBreakfast() {
         System.out.println("Путешественики позавтракали");
-        System.out.println("Путешественики оделись");
+    }
+    public void goWalk() {
         System.out.println("Путешественники решили прогуляться по городу");
     }
 

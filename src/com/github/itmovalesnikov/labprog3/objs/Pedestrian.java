@@ -3,8 +3,8 @@ package com.github.itmovalesnikov.labprog3.objs;
 import java.util.Random;
 
 public class Pedestrian extends PhysicalObject {
-    Newspaper newspaper;
-    PedestrianState state;
+    private Newspaper newspaper;
+    private PedestrianState state;
 
     public Pedestrian() {
         this(null);
@@ -26,16 +26,16 @@ public class Pedestrian extends PhysicalObject {
     public void interact() {
         switch (state) {
             case SIT_ON_BENCH:
-                System.out.println("Прохожий читает газету, сидя на лавочке");
+                System.out.println("Прохожий читает газету, сидя на лавочке: " + newspaper.read());
                 break;
             case STOP_ON_SIDEWALK:
-                System.out.println("Прохожий читает газету, остановившись прямо посреди тротуара");
+                System.out.println("Прохожий читает газету, остановившись прямо посреди тротуара: " + newspaper.read());
                 break;
             case READ_ON_WALK:
-                System.out.println("Прохожий читает газету на ходу");
+                System.out.println("Прохожий читает газету на ходу: " + newspaper.read());
                 break;
             case GO_TO_KIOSK:
-                System.out.println("Мчится наперегонки к газетному киоску");
+                System.out.println("Прохожий мчится наперегонки к газетному киоску");
                 break;
         }
     }
